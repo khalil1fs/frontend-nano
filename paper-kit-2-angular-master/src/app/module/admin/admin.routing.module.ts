@@ -7,12 +7,10 @@ import {FormationAdminComponent} from './view/formation-admin/formation-admin.co
 import {FormationAddComponent} from './view/formation-admin/formation-add/formation-add.component';
 import {FormationEditComponent} from './view/formation-admin/formation-edit/formation-edit.component';
 import {FormationViewComponent} from './view/formation-admin/formation-view/formation-view.component';
-// import { FormationListComponent } from './view/formation-admin/formation-list/formation-list.component';
 import {CongresAdminComponent} from './view/congres-admin/congres-admin.component';
 import {CongresAddComponent} from './view/congres-admin/congres-add/congres-add.component';
 import {CongresEditComponent} from './view/congres-admin/congres-edit/congres-edit.component';
 import {CongresViewComponent} from './view/congres-admin/congres-view/congres-view.component';
-// import { CongresListComponent } from './view/congres-admin/congres-list/congres-list.component';
 import {ProduitBioAdminComponent} from './view/produit-bio-admin/produit-bio-admin.component';
 import {ProduitBioAddComponent} from './view/produit-bio-admin/produit-bio-add/produit-bio-add.component';
 import {ProduitBioEditComponent} from './view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component';
@@ -29,6 +27,10 @@ import {CommandeViewComponent} from './view/commande-admin/commande-view/command
 import {CommandeEditComponent} from './view/commande-admin/commande-edit/commande-edit.component';
 import {FormationListComponent} from './view/formation-admin/formation-list/formation-list.component';
 import {CongresListComponent} from './view/congres-admin/congres-list/congres-list.component';
+import {UserAdminComponent} from './view/user-admin/user-admin.component';
+import {UserViewComponent} from './view/user-admin/user-view/user-view.component';
+import {UserListComponent} from './view/user-admin/user-list/user-list.component';
+import {UserEditComponent} from './view/user-admin/user-edit/user-edit.component';
 
 
 @NgModule({
@@ -43,12 +45,137 @@ import {CongresListComponent} from './view/congres-admin/congres-list/congres-li
                             children: [
                                 {
                                     path: 'add',
-                                    // component: ,
+                                    component: FormationAddComponent,
                                     canActivate: [AuthGuard]
-                                }
+                                }, {
+                                    path: 'edit',
+                                    component: FormationEditComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'list',
+                                    component: FormationListComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'view',
+                                    component: FormationViewComponent,
+                                    canActivate: [AuthGuard]
+                                },
                             ]
-                        },
-                        {
+                        }, {
+                            path: 'congres',
+                            children: [
+                                {
+                                    path: 'add',
+                                    component: CongresAddComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'edit',
+                                    component: CongresEditComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'list',
+                                    component: CongresListComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'view',
+                                    component: CongresViewComponent,
+                                    canActivate: [AuthGuard]
+                                },
+                            ]
+                        }, {
+                            path: 'produit-bio',
+                            children: [
+                                {
+                                    path: 'add',
+                                    component: ProduitBioAddComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'edit',
+                                    component: ProduitBioEditComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'list',
+                                    component: ProduitBioListComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'view',
+                                    component: ProduitBioViewComponent,
+                                    canActivate: [AuthGuard]
+                                },
+                            ]
+                        }, {
+                            path: 'gerant',
+                            children: [
+                                {
+                                    path: 'add',
+                                    component: GerantAddComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'edit',
+                                    component: GerantEditComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'list',
+                                    component: GerantListComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'view',
+                                    component: GerantViewComponent,
+                                    canActivate: [AuthGuard]
+                                },
+                            ]
+                        }, {
+                            path: 'commande',
+                            children: [
+                                {
+                                    path: 'edit',
+                                    component: CommandeEditComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'list',
+                                    component: CommandeListComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'view',
+                                    component: CommandeViewComponent,
+                                    canActivate: [AuthGuard]
+                                },
+                            ]
+                        }, {
+                            path: 'paiment',
+                            children: [
+                                {
+                                    path: 'edit',
+                                    component: ProduitBioEditComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'list',
+                                    component: ProduitBioListComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'view',
+                                    component: ProduitBioViewComponent,
+                                    canActivate: [AuthGuard]
+                                },
+                            ]
+                        }, {
+                            path: 'user',
+                            children: [
+                                {
+                                    path: 'edit',
+                                    component: UserEditComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'list',
+                                    component: UserListComponent,
+                                    canActivate: [AuthGuard]
+                                }, {
+                                    path: 'view',
+                                    component: UserViewComponent,
+                                    canActivate: [AuthGuard]
+                                },
+                            ]
+                        }, {
                             path: 'register',
                             children: [
                                 {
@@ -64,7 +191,7 @@ import {CongresListComponent} from './view/congres-admin/congres-list/congres-li
         ),
     ],
     exports: [RouterModule],
-    declarations: [FormationAdminComponent, FormationAddComponent, FormationEditComponent, FormationViewComponent, FormationListComponent, CongresAdminComponent, CongresAddComponent, CongresEditComponent, CongresViewComponent, CongresListComponent, ProduitBioAdminComponent, ProduitBioAddComponent, ProduitBioEditComponent, ProduitBioViewComponent, ProduitBioListComponent, GerantAdminComponent, GerantAddComponent, GerantEditComponent, GerantViewComponent, GerantListComponent, CommandeAdminComponent, CommandeListComponent, CommandeViewComponent, CommandeEditComponent],
+    declarations: [FormationAdminComponent, FormationAddComponent, FormationEditComponent, FormationViewComponent, FormationListComponent, CongresAdminComponent, CongresAddComponent, CongresEditComponent, CongresViewComponent, CongresListComponent, ProduitBioAdminComponent, ProduitBioAddComponent, ProduitBioEditComponent, ProduitBioViewComponent, ProduitBioListComponent, GerantAdminComponent, GerantAddComponent, GerantEditComponent, GerantViewComponent, GerantListComponent, CommandeAdminComponent, CommandeListComponent, CommandeViewComponent, CommandeEditComponent, UserAdminComponent, UserViewComponent, UserListComponent, UserEditComponent],
 })
 export class AdminRoutingModule {
 }
