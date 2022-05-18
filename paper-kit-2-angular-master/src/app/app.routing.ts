@@ -10,6 +10,9 @@ import {FormationComponent} from "./module/client/view/formation/formation.compo
 import {CongresComponent} from "./module/client/view/congres/congres.component";
 import {AuthGuard} from './controller/guards/auth.guard';
 import {AccessDeniedComponent} from './auth/access-denied/access-denied.component';
+import {PanierComponent} from "./module/client/view/panier/panier.component";
+import {OverseaseducationComponent} from "./module/client/view/overseaseducation/overseaseducation.component";
+import {CheckoutComponent} from "./module/client/view/checkout/checkout.component";
 
 @NgModule({
   imports: [
@@ -20,10 +23,13 @@ import {AccessDeniedComponent} from './auth/access-denied/access-denied.componen
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home',             component: ComponentsComponent },
             { path: 'login',             component: LoginPageComponent },
-            { path: 'products',          component: ProduitBioComponent },
             { path: 'formation',          component: FormationComponent },
             { path: 'register',          component: RegisterComponent },
             { path: 'congres',          component: CongresComponent },
+            { path: 'produitbio',          component: ProduitBioComponent },
+            { path: 'panier',          component: PanierComponent },
+            { path: 'overseaseducation',          component: OverseaseducationComponent },
+            { path: 'checkout',          component: CheckoutComponent },
             // {
             //     path: 'app', // '\'' + root + '\'',
             //     // component: M,

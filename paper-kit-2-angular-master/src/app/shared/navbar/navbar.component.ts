@@ -93,7 +93,7 @@ export class NavbarComponent implements OnInit {
         if(titlee.charAt(0) === '#') {
             titlee = titlee.slice( 1 );
         }
-        return titlee === '/products';
+        return titlee === '/produitbio';
     }
 
     isRegister() {
@@ -139,6 +139,6 @@ export class NavbarComponent implements OnInit {
         if(titlee.charAt(0) === '#') {
             titlee = titlee.slice( 1 );
         }
-        return titlee === '/overseaeducation';
+        return titlee === '/overseaseducation';
     }
 }

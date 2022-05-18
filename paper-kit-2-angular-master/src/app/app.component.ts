@@ -133,7 +133,7 @@ export class AppComponent implements OnInit {
         if(titlee.charAt(0) === '#') {
             titlee = titlee.slice( 1 );
         }
-        return titlee === '/overseaeducation';    }
+        return titlee === '/overseaesducation';    }
 }
 
 

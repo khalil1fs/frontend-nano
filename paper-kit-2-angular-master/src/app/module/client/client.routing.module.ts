@@ -4,6 +4,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {AuthGuard} from '../../controller/guards/auth.guard';
+import { PanierComponent } from './view/panier/panier.component';
+import { CheckoutComponent } from './view/checkout/checkout.component';
+import { OverseaseducationComponent } from './view/overseaseducation/overseaseducation.component';
 
 
 @NgModule({
@@ -39,5 +42,6 @@ import {AuthGuard} from '../../controller/guards/auth.guard';
         ),
     ],
     exports: [RouterModule],
+    declarations: [PanierComponent, CheckoutComponent, OverseaseducationComponent],
 })
 export class ClientRoutingModule { }
