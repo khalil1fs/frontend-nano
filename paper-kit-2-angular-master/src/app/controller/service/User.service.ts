@@ -8,12 +8,12 @@ import {environment} from '../../../environments/environment';
 })
 export class UserService {
   // declarations
-    readonly API  = environment.apiUrl;
-    private _users:User[]=[];
-    private _selectedUsers:User[]=[];
-    private _userDialog:boolean=false;
-    private _user:User = new User();
-    private _submitted: boolean;
+  readonly API  = environment.apiUrl;
+  private _users:User[]=[];
+  private _selectedUsers:User[]=[];
+  private _userDialog:boolean=false;
+  private _user:User = new User();
+  private _submitted: boolean;
 
   constructor(private http:HttpClient) { }
   // methods
@@ -24,7 +24,7 @@ export class UserService {
   }
   save(user:User){
     this.http.post<User>(this.API+"save",user).subscribe(user=>{
-       this._users = [...this._users,user];
+      this._users = [...this._users,user];
     },(error:HttpErrorResponse)=>{console.log(error.error)})
   }
   update(user:User){

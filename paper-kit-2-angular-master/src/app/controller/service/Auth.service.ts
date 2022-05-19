@@ -33,7 +33,6 @@ export class AuthService {
                 const jwt = resp.headers.get('Authorization');
                 jwt != null ? this.tokenService.saveToken(jwt) : false;
                 this.loadInfos();
-                // alert('you are logged in successfully');
                 console.log('you are logged in successfully');
                 this.getRole(username);
                 // this.router.navigate(['/formation']);
@@ -49,7 +48,7 @@ export class AuthService {
        return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
            data => {
                this.str = data;
-               // this.router.navigate(['/formation/'+this.str.toLowerCase()]);
+               this.router.navigate(['/formation']);
                console.log(data);
            }, (error: HttpErrorResponse) => {
                this.error = error.error;

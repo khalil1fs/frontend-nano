@@ -23,7 +23,7 @@ export class FormationAddComponent implements OnInit {
       this.selectedFormation = new Formation();
     }, (error: HttpErrorResponse) => {
       this.error = error.error;
-      console.log(error);
+      console.log('error');
     });
   }
 
