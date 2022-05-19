@@ -17,7 +17,9 @@ import { ProduitBioComponent } from './module/client/view/produit-bio/produit-bi
 import { CongresComponent } from './module/client/view/congres/congres.component';
 import {HttpClientModule} from '@angular/common/http';
 // import { FormationAdminComponent } from './controller/module/admin/formation-admin/formation-admin.component';
-
+import { PanierComponent } from './module/client/view/panier/panier.component';
+import { CheckoutComponent } from './module/client/view/checkout/checkout.component';
+import {CongresListComponent} from './module/admin/view/congres-admin/congres-list/congres-list.component';
 
 
 
@@ -31,6 +33,10 @@ import {HttpClientModule} from '@angular/common/http';
     FormationComponent,
     ProduitBioComponent,
     CongresComponent,
+      PanierComponent,
+      CheckoutComponent,
+    CongresListComponent,
+
     // FormationAdminComponent,
   ],
   imports: [

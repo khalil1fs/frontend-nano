@@ -13,6 +13,7 @@ import {AccessDeniedComponent} from './auth/access-denied/access-denied.componen
 import {PanierComponent} from "./module/client/view/panier/panier.component";
 import {OverseaseducationComponent} from "./module/client/view/overseaseducation/overseaseducation.component";
 import {CheckoutComponent} from "./module/client/view/checkout/checkout.component";
+import {CongresListComponent} from "./module/admin/view/congres-admin/congres-list/congres-list.component";
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import {CheckoutComponent} from "./module/client/view/checkout/checkout.componen
             { path: 'panier',          component: PanierComponent },
             { path: 'overseaseducation',          component: OverseaseducationComponent },
             { path: 'checkout',          component: CheckoutComponent },
+            { path: 'congreslist',          component: CongresListComponent },
             // {
             //     path: 'app', // '\'' + root + '\'',
             //     // component: M,

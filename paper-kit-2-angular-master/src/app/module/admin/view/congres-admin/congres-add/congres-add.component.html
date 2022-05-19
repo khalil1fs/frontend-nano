@@ -14,16 +14,26 @@
                         </div>
                         <form class="register-form col-lg-12" [formGroup]="registerForm">
 
-                            <label>objectif congres</label>
-                            <div class="input-group form-group-no-border col-lg-12" [ngClass]="{'input-group-focus':focus===true}">
+                            <label>Objectif Congrés</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text">
-<!--                                   <i class="fa fa-user" aria-hidden="true"></i>-->
-                                  </span>
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="username" placeholder="congres" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="text" class="form-control" formControlName="adresse" placeholder="congrés" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
 
+                            <label>Encadrant</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
+                                </div>
+
+                                <input type="text" class="form-control" formControlName="adresse" placeholder="Encadrant" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
 
@@ -32,10 +42,10 @@
                             <label>date</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text">
-<!--                                   <i class="fa fa-phone-square" aria-hidden="true"></i>-->
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                   <i class="fa fa-phone-square" aria-hidden="true"></i>&ndash;&gt;-->
 
-                                  </span>
+                                    <!--                                  </span>-->
                                 </div>
 
                                 <input type="text" class="form-control" formControlName="phone" placeholder="date" (focus)="focus=true" (blur)="focus=false" >
@@ -44,9 +54,9 @@
                             <label>adresse</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text">
-<!--                                  <i class="fa fa-envelope" aria-hidden="true"></i>-->
-                                  </span>
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
                                 </div>
 
                                 <input type="text" class="form-control" formControlName="adresse" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
@@ -57,9 +67,9 @@
                             <label>heur</label>
                             <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text">
-<!--                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>-->
-                                  </span>
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
                                 </div>
                                 <input type="datetime-local" class="form-control" formControlName="heur" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
                                 <!--                                <input id="party" type="datetime-local" name="partydate">-->
@@ -79,4 +89,6 @@
         </div>
     </div>
 </div>
+
+
 
