@@ -31,6 +31,8 @@ import {UserAdminComponent} from './view/user-admin/user-admin.component';
 import {UserViewComponent} from './view/user-admin/user-view/user-view.component';
 import {UserListComponent} from './view/user-admin/user-list/user-list.component';
 import {UserEditComponent} from './view/user-admin/user-edit/user-edit.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -189,6 +191,9 @@ import {UserEditComponent} from './view/user-admin/user-edit/user-edit.component
                 },
             ]
         ),
+        ReactiveFormsModule,
+        CommonModule,
+        FormsModule,
     ],
     exports: [RouterModule],
     declarations: [FormationAdminComponent, FormationAddComponent, FormationEditComponent, FormationViewComponent, FormationListComponent, CongresAdminComponent, CongresAddComponent, CongresEditComponent, CongresViewComponent, CongresListComponent, ProduitBioAdminComponent, ProduitBioAddComponent, ProduitBioEditComponent, ProduitBioViewComponent, ProduitBioListComponent, GerantAdminComponent, GerantAddComponent, GerantEditComponent, GerantViewComponent, GerantListComponent, CommandeAdminComponent, CommandeListComponent, CommandeViewComponent, CommandeEditComponent, UserAdminComponent, UserViewComponent, UserListComponent, UserEditComponent],
