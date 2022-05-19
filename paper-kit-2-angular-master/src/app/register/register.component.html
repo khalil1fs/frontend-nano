@@ -1,23 +1,28 @@
 <div class="wrapper">
-    <div class="page-header" style="background-image: url('./assets/img/img3.jpeg');">
+    <div class="page-header" style="background-image: url('./assets/img/smoke.jpg');">
         <div class="filter"></div>
         <div class="container col-lg-12 col-sm-12">
+
             <div class="row">
                 <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
-                    <div class="card card-register " style="background-color: black;opacity: 0.6; "  >
 
+                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
+                        <div class="text-center ">
+                            <h3>Créer un compte</h3>
+                            <!--                            <p class="lead"></p>-->
+                        </div>
                         <form class="register-form col-lg-12" [formGroup]="registerForm">
 
                             <label>Nom d'Utilisateur</label>
-                            <div class="input-group form-group-no-border col-lg-12" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                   <i class="fa fa-user" aria-hidden="true"></i>
+                                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+
                                   </span>
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="username" placeholder="Utilisateur" (focus)="focus=true" (blur)="focus=false" >
-
+                                <input type="text" class="form-control" formControlName="phone" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
 
@@ -41,7 +46,7 @@
                                   </span>
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="phone" placeholder="Numéro telephone" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="number" class="form-control" formControlName="phone" placeholder="Numéro telephone" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
                             <label>Email</label>
@@ -81,3 +86,17 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
