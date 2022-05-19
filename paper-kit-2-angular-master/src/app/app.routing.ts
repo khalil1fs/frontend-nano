@@ -13,7 +13,7 @@ import {AccessDeniedComponent} from './auth/access-denied/access-denied.componen
 import {PanierComponent} from "./module/client/view/panier/panier.component";
 import {OverseaseducationComponent} from "./module/client/view/overseaseducation/overseaseducation.component";
 import {CheckoutComponent} from "./module/client/view/checkout/checkout.component";
-import {CongresListComponent} from "./module/admin/view/congres-admin/congres-list/congres-list.component";
+import {FormationAddComponent} from "./module/admin/view/formation-admin/formation-add/formation-add.component";
 
 @NgModule({
   imports: [
@@ -24,14 +24,13 @@ import {CongresListComponent} from "./module/admin/view/congres-admin/congres-li
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home',             component: ComponentsComponent },
             { path: 'login',             component: LoginPageComponent },
-            { path: 'formation',          component: FormationComponent },
+            { path: 'formation',          component: FormationAddComponent },
             { path: 'register',          component: RegisterComponent },
             { path: 'congres',          component: CongresComponent },
             { path: 'produitbio',          component: ProduitBioComponent },
             { path: 'panier',          component: PanierComponent },
             { path: 'overseaseducation',          component: OverseaseducationComponent },
             { path: 'checkout',          component: CheckoutComponent },
-            { path: 'congreslist',          component: CongresListComponent },
             // {
             //     path: 'app', // '\'' + root + '\'',
             //     // component: M,
