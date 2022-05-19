@@ -16,6 +16,7 @@ import { FormationComponent } from './module/client/view/formation/formation.com
 import { ProduitBioComponent } from './module/client/view/produit-bio/produit-bio.component';
 import { CongresComponent } from './module/client/view/congres/congres.component';
 import {HttpClientModule} from '@angular/common/http';
+import {PanierComponent} from "./module/client/view/panier/panier.component";
 // import { FormationAdminComponent } from './controller/module/admin/formation-admin/formation-admin.component';
 
 
@@ -23,6 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
+    PanierComponent,
     AppComponent,
     NavbarComponent,
     FooterComponent,
