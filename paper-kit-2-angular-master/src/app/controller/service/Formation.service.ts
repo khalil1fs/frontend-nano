@@ -18,22 +18,24 @@ export class FormationService {
   private API = environment.adminUrl + 'formation';
 
 
-  public findAll(){
-    return this.http.get<Array<Formation>>(this.API + '/');
-  }
+  // public findAll(){
+  //   return this.http.get<Array<Formation>>(this.API + '/');
+  // }
+
+
 
   public save(): Observable<Formation> {
-    return this.http.post<Formation>(this.API + '/',this.selectedformation);
+    return this.http.post<Formation>(this.API  + '/' ,this.selectedformation);
   }
 
-  public edit(): Observable<Formation> {
-    return this.http.put<Formation>(this.API + '/', this.selectedformation);
-  }
-
-
-  public findByName(name: string):Observable<Formation>{
-    return this.http.get<Formation>(this.API + '/' + name);
-  }
+  // public edit(): Observable<Formation> {
+  //   return this.http.put<Formation>(this.API + '/', this.selectedformation);
+  // }
+  //
+  //
+  // public findByName(name: string):Observable<Formation>{
+  //   return this.http.get<Formation>(this.API + '/' + name);
+  // }
 
 
   /*  Getters and Setters  */

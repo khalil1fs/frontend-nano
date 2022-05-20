@@ -8,24 +8,36 @@
 
                     <div class="card card-register " style="background-color: black; opacity: 0.6;">
                         <div class="text-center ">
-                            <h3>Ajouter une Formation</h3>
+                            <h3>{{title}}</h3>
                             <!--                            <p class="lead"></p>-->
                         </div>
                         <form class="register-form col-lg-12">
-
-                            <label>Nom De Formation</label>
-                            <div class="input-group form-group-no-border"
-                                 [ngClass]="{'input-group-focus':focus===true}">
+                            <label>Test</label>
+                            <div class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
-                                    <!--                                  <span class="input-group-text">-->
-                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
-                                    <!--                                  </span>-->
+
                                 </div>
 
                                 <input type="text" class="form-control"
-                                       [(ngModel)]="selectedFormation.nom"
-                                       placeholder="Nom produit" (focus)="focus=true" (blur)="focus=false">
+                                       [(ngModel)]="title"
+                                       placeholder="test">
                             </div>
+<!--<label>Nom De Formation</label>-->
+<!--                            <div class="input-group form-group-no-border"-->
+<!--                                 [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    &lt;!&ndash;                                  <span class="input-group-text">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;&ndash;&gt;-->
+<!--                                    &lt;!&ndash;                                  </span>&ndash;&gt;-->
+<!--                                </div>-->
+
+<!--                                <input type="text" class="form-control"-->
+<!--                                       [(ngModel)]="selectedFormation.nom"-->
+<!--                                       placeholder="Nom produit" (focus)="focus=true" (blur)="focus=false">-->
+<!--                            </div>-->
+
+
+
                             <label>Nombre Des Places</label>
                             <div class="input-group form-group-no-border justify-content-center"
                                  [ngClass]="{'input-group-focus':focus1===true} ">
@@ -74,7 +86,7 @@
                                     <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
                                     <!--                                  </span>-->
                                 </div>
-                                <input type="texte" class="form-control"
+                                <input type="text" class="form-control"
                                        [(ngModel)]="selectedFormation.duree"
                                        placeholder="Durée"
                                        (focus)="focus=true" (blur)="focus=false">

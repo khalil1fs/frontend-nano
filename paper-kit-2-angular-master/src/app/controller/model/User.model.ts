@@ -7,12 +7,12 @@ export class User {
     public accountNonExpired: boolean;
     public accountNonLocked: boolean;
     public id: string;
-    public prenom:string;
+    public prenom: string;
     public nom:string;
     public username: string;
     public password: string;
     public passwordChanged: boolean;
-    public phone: boolean;
+    public phone: string;
     public newPassword: string;
     public confirmPassword: string;
     public  createdAt: Date;

@@ -36,7 +36,6 @@ import {PanierComponent} from "./module/client/view/panier/panier.component";
         ReactiveFormsModule,
         BrowserModule,
         HttpClientModule,
-        NgbModule,
         FormsModule,
         RouterModule,
         ComponentsModule,

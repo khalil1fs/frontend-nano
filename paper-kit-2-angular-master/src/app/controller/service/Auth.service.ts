@@ -132,6 +132,9 @@ export class AuthService {
     }
 
     get user(): User {
+        if (this._user == null) {
+            this._user = new User();
+        }
         return this._user;
     }
 
