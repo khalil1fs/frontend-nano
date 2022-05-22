@@ -17,5 +17,5 @@ export class User {
     public confirmPassword: string;
     public  createdAt: Date;
     public  updatedAt: Date;
-    public roles: Role;
+    public roles: any = [];
 }

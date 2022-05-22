@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {Formation} from "../model/formation.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
+import {ProduitBio} from "../model/produit-bio.model";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,8 @@ export class FormationService {
   private _formations: Array<Formation> ;
   private _selectedformation: Formation;
 
+  private _selectedProduitBio: ProduitBio;
+
   constructor(private router: Router, private http: HttpClient) { }
   private API = environment.adminUrl + 'formation';
 
@@ -23,6 +26,10 @@ export class FormationService {
   // }
 
 
+
+  // public save(): Observable<ProduitBio> {
+  //   return this.http.post<ProduitBio>(this.API  + '/' ,this.selectedProduitBio);
+  // }
 
   public save(): Observable<Formation> {
     return this.http.post<Formation>(this.API  + '/' ,this.selectedformation);
@@ -72,5 +79,17 @@ export class FormationService {
 
   set formations(value: Array<Formation>) {
     this._formations = value;
+  }
+
+
+  get selectedProduitBio(): ProduitBio {
+    if (this._selectedProduitBio == null) {
+      this._selectedProduitBio = new ProduitBio();
+    }
+    return this._selectedProduitBio;
+  }
+
+  set selectedProduitBio(value: ProduitBio) {
+    this._selectedProduitBio = value;
   }
 }

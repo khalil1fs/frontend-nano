@@ -35,8 +35,8 @@ export class AuthService {
                 this.loadInfos();
                 console.log('you are logged in successfully');
                 this.getRole(username);
-                // this.router.navigate(['/formation']);
-            }, (error: HttpErrorResponse) => {
+                this.router.navigate(['/formation']);
+                }, (error: HttpErrorResponse) => {
                 this.error = error.error;
                 console.log(error);
             }
@@ -48,7 +48,6 @@ export class AuthService {
        return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
            data => {
                this.str = data;
-               this.router.navigate(['/formation']);
                console.log(data);
            }, (error: HttpErrorResponse) => {
                this.error = error.error;
@@ -128,13 +127,10 @@ export class AuthService {
         this.authenticated = false;
         this._loggedIn.next(false);
         this._authenticatedUser = new User();
-        this.router.navigate(['']);
+        this.router.navigate(['/login']);
     }
 
     get user(): User {
-        if (this._user == null) {
-            this._user = new User();
-        }
         return this._user;
     }
 
